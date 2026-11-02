@@ -1,0 +1,191 @@
+{
+  "Reagent-1789112329669": {
+    "type": "Reagent",
+    "alias": "DpnI",
+    "descriptions": [
+      "NEB_R0176L"
+    ],
+    "sources": [
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1789027106924": {
+    "type": "Reagent",
+    "alias": "E-Gel™ 1 Kb Plus Express DNA Ladder",
+    "descriptions": [
+      "Invitrogen_10488091"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1789027092951": {
+    "type": "Reagent",
+    "alias": "E-Gel™ EX Agarose Gels, 1%",
+    "descriptions": [
+      "Invitrogen_G401001"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1789027142713": {
+    "type": "Reagent",
+    "alias": "E-Gel™ Sample Loading Buffer (1X)",
+    "descriptions": [
+      "Invitrogen_10482055"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1789114476169": {
+    "type": "Reagent",
+    "alias": "Gibson Assembly® Master Mix",
+    "descriptions": [
+      "NEB_E2611L"
+    ],
+    "sources": [
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1788851665659": {
+    "type": "Reagent",
+    "alias": "KOD- KOD One PCR Master Mix (Toyobo_KMM-101)",
+    "descriptions": [
+      "KOD polymerase 2x mastermix toyobo"
+    ],
+    "sources": [
+      "002_WB150_PCRbased_Target_Amplification.labnote.md",
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1789028119644": {
+    "type": "Reagent",
+    "alias": "NEBuffer2",
+    "descriptions": [
+      "NEB_M0302"
+    ],
+    "sources": [
+      "003_WG010_Blank_Workflow.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1789028139931": {
+    "type": "Reagent",
+    "alias": "T7 Endonuclease I",
+    "descriptions": [
+      "NEB M0302"
+    ],
+    "sources": [
+      "003_WG010_Blank_Workflow.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1789026237667": {
+    "type": "Reagent",
+    "alias": "UltraPure™ DNase/RNase-Free Distilled Water",
+    "descriptions": [
+      "Invitrogen™_10977015"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1789020476790": {
+    "type": "Reagent",
+    "alias": "Wizard® SV Gel and PCR Clean-Up System",
+    "descriptions": [
+      "Promega A9282",
+      "Promega A9282Wizard® SV Gel and PCR Clean-Up System (Promega A9282)"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Reagent-1793090514279": {
+    "type": "Reagent",
+    "alias": "T4 Polynucleotide Kinase",
+    "descriptions": [
+      "NEB M0201S"
+    ],
+    "sources": [],
+    "location": "냉동고1-JM칸"
+  },
+  "Reagent-1793090651997": {
+    "type": "Reagent",
+    "alias": "T4 DNA Polymerase",
+    "descriptions": [
+      "NEB M0203S"
+    ],
+    "sources": [],
+    "location": "냉동고1-JM칸"
+  },
+  "Reagent-1793090675412": {
+    "type": "Reagent",
+    "alias": "0.5M EDTA, pH8.0",
+    "descriptions": [
+      "LPS solution CBE002"
+    ],
+    "sources": [],
+    "location": "DNA 실험대"
+  },
+  "Reagent-1793090704205": {
+    "type": "Reagent",
+    "alias": "TE buffer (pH8.0/1X)",
+    "descriptions": [
+      "BIONEER C-9005"
+    ],
+    "sources": [],
+    "location": "DNA 실험대"
+  },
+  "Reagent-1793090756914": {
+    "type": "Reagent",
+    "alias": "T4 DNA Ligase",
+    "descriptions": [
+      "NEB M0202T"
+    ],
+    "sources": [],
+    "location": "냉동고3"
+  },
+  "Reagent-1793090799825": {
+    "type": "Reagent",
+    "alias": "MgCl2",
+    "descriptions": [
+      "Sigma M8266"
+    ],
+    "sources": [],
+    "location": "연구동 시약장"
+  },
+  "Reagent-1793091430214": {
+    "type": "Reagent",
+    "alias": "10× T4 DNA ligase buffer",
+    "descriptions": [
+      "NEB M0202T"
+    ],
+    "sources": [],
+    "location": "냉동고3번"
+  }
+}

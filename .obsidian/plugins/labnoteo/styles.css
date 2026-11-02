@@ -1,0 +1,357 @@
+/*
+ * Labnote Assistant styles.
+ *
+ * All plugin styling lives here so themes can override it and no rules are
+ * injected from JavaScript. Values that must be dynamic (a sample type's colour,
+ * a tree row's depth) are passed in via CSS custom properties set on the element
+ * (`--labnote-*`), which is the Obsidian-recommended pattern for runtime values.
+ */
+
+/* --- Samples sidebar search box ----------------------------------------- */
+.labnote-sample-search {
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+/* --- Workflow sidebar: experiment search + grouping ---------------------- */
+.labnote-workflow-controls {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.labnote-workflow-search {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* --- Sidebar view hint (what to do here) --------------------------------- */
+.labnote-view-hint {
+  margin-bottom: 6px;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+/* --- Tree views (workflows + samples sidebars) --------------------------- */
+.labnote-tree-row {
+  display: flex;
+  align-items: center;
+  cursor: var(--cursor, pointer);
+  padding-left: calc(var(--labnote-tree-depth, 0) * 14px + 4px);
+  border-radius: var(--radius-s);
+}
+
+.labnote-tree-row:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.labnote-tree-row:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: -2px;
+}
+
+/* 기록지 출력 창: 키보드로 옮겨 간 토글이 보이게 (#325) */
+.labnote-worksheet-modal .checkbox-container:has(input:focus-visible) {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+.labnote-tree-twistie,
+.labnote-tree-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+  color: var(--text-muted);
+}
+
+.labnote-tree-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+  background-color: var(--labnote-tree-dot-color, var(--text-muted));
+}
+
+.labnote-tree-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.labnote-tree-row.is-dimmed,
+.suggestion-item.is-discarded {
+  opacity: 0.55;
+}
+
+.labnote-tree-children.is-collapsed {
+  display: none;
+}
+
+/* --- Sample id highlighting (editor + reading mode) ---------------------- */
+.labnote-sample-id {
+  background-color: var(--labnote-sample-color, transparent);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+/* A sample ID neither registered nor defined in the note: deleted, moved
+   away, or typed without registering it (#210). The title says so. */
+.labnote-sample-id-missing {
+  text-decoration: wavy underline var(--text-error);
+  text-underline-offset: 3px;
+}
+
+/* A reference whose alias differs from the registry's (#239); the title
+   gives the registry's alias. */
+.labnote-sample-alias-stale {
+  text-decoration: dotted underline var(--text-warning);
+  text-underline-offset: 3px;
+}
+
+/* A reference to a sample marked discarded (#330): faded and struck through. */
+.labnote-sample-discarded {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.labnote-sample-alias-stale.labnote-sample-discarded {
+  text-decoration-line: underline line-through;
+}
+
+/* --- @issue markers (editor + reading mode) ------------------------------
+   Only well-formed markers get this class, so the styling is also the signal
+   that a marker will actually open an issue. The opaque error background hides
+   body text, so a light red tint carries red text mixed toward the body colour,
+   which keeps contrast in light and dark mode. The rgba/--text-error lines are
+   fallbacks for installs whose Chromium predates color-mix(). */
+.labnote-issue-marker {
+  background-color: rgba(var(--color-red-rgb), 0.15);
+  background-color: color-mix(in oklch, var(--color-red) 15%, transparent);
+  color: var(--text-error);
+  color: color-mix(in oklch, var(--color-red) 70%, var(--text-normal));
+  border-radius: 3px;
+  padding: 0 3px;
+  font-weight: var(--font-medium);
+}
+
+/* The editor draws a marker in pieces wherever formatting splits its line
+   (#292): no gaps or rounded ends between them, and bold inside stays bold. */
+.markdown-source-view .labnote-issue-marker {
+  padding: 0;
+  border-radius: 0;
+  font-weight: inherit;
+}
+
+/* A marker whose ID another marker of the experiment also uses: both would
+   land in one issue. Editor only; the title says where the other one is. */
+.labnote-issue-marker-duplicate {
+  text-decoration: wavy underline var(--text-warning);
+  text-underline-offset: 3px;
+}
+
+/* A marker without an ID or topic sentence: validate fails the push on it. */
+.labnote-issue-marker-malformed {
+  text-decoration: wavy underline var(--text-warning);
+  text-underline-offset: 3px;
+}
+
+/* --- Meta date fields (click to pick a date/time) ------------------------ */
+.labnote-date-value {
+  cursor: pointer;
+  border-bottom: 1px dotted var(--text-accent);
+}
+
+.labnote-date-value:hover {
+  background-color: var(--background-modifier-hover);
+}
+
+.labnote-date-pick {
+  cursor: pointer;
+  padding-left: 4px;
+  opacity: 0.6;
+}
+
+.labnote-date-pick:hover {
+  opacity: 1;
+}
+
+/*
+ * Obsidian's own `input[type="datetime-local"]` rule outranks a bare class
+ * selector (0-1-1 vs 0-1-0) and pins the field to `position: relative`, which
+ * dropped the popup out of the viewport. Matching on `body > input.…` (0-1-2)
+ * keeps it above that rule without resorting to `!important`.
+ */
+body > input.labnote-datetime-picker {
+  position: fixed;
+  z-index: var(--layer-popover);
+  font-size: var(--font-ui-small);
+  color: var(--text-normal);
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  box-shadow: var(--shadow-s);
+  padding: 4px 6px;
+}
+
+/* --- Pickers / suggestions ---------------------------------------------- */
+.labnote-pick-title {
+  padding: var(--size-4-2) var(--size-4-3) 0;
+  font-size: var(--font-ui-small);
+  font-weight: var(--font-semibold);
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+.labnote-pick-desc,
+.labnote-pick-detail,
+.labnote-suggest-detail {
+  display: block;
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+}
+.labnote-pick-detail {
+  margin-top: 2px;
+  white-space: normal; /* 긴 설명 전문을 줄바꿈으로 표시 */
+}
+
+/* --- Prompt modal ------------------------------------------------------- */
+.labnote-prompt-error {
+  color: var(--text-error);
+  min-height: 1em;
+}
+
+/* The prompt row carries no label, so Obsidian's empty info column only serves
+   to squeeze the input against the right edge. Drop it and take the width. */
+.labnote-prompt-row .setting-item-info {
+  display: none;
+}
+
+.labnote-prompt-row .setting-item-control {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.labnote-prompt-row .setting-item-control input {
+  width: 100%;
+  min-width: 0;
+}
+
+/* --- Confirm modal ------------------------------------------------------ */
+.labnote-confirm-message {
+  white-space: pre-wrap; /* 확인 대상 목록·경로를 줄마다 표시 */
+  max-height: 60vh; /* 지워질 줄 목록이 길어도 버튼이 화면 밖으로 밀리지 않게 */
+  overflow-y: auto;
+}
+
+/* AI 답변 창: 긴 답변은 버튼이 가려지지 않게 본문만 스크롤하고, 일부만 골라 복사할 수 있게 함 */
+.labnote-ai-answer {
+  max-height: 60vh;
+  overflow-y: auto;
+  user-select: text;
+}
+
+/* --- Workflow alias modal ----------------------------------------------- */
+.labnote-alias-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 1em 0;
+}
+
+.labnote-alias-prefix {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.labnote-alias-input {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.labnote-alias-about,
+.labnote-alias-description {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  margin-bottom: 0.5em;
+}
+
+.labnote-alias-description {
+  max-height: 8em; /* 긴 카탈로그 설명(최대 약 600자)은 창 안에서 스크롤 */
+  overflow-y: auto;
+  user-select: text;
+}
+
+/* 이름 입력 창의 글자 수 안내: 넘으면 경고 색으로만 알리고 저장은 막지 않음 */
+.labnote-input-hint {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  margin-top: -0.5em;
+}
+
+.labnote-input-hint.is-warning {
+  color: var(--text-warning);
+}
+
+/* --- Sample definition modal -------------------------------------------- */
+/* Obsidian splits a setting row evenly between label and control, which wastes
+   space here: the labels are one word while the values can be a full vault
+   path. Let the label take only what it needs and give the rest to the value. */
+.labnote-sample-def-row .setting-item-info {
+  flex: 0 1 auto;
+  /* A floor rather than a fixed width, so the inputs share one left edge while
+     a longer label in another locale still gets the room it needs. */
+  min-width: 7em;
+}
+
+.labnote-sample-def-row .setting-item-control {
+  flex: 1 1 auto;
+  /* Without this the input's intrinsic width sets a floor and the row overflows
+     the modal instead of the input shrinking to fit. */
+  min-width: 0;
+}
+
+.labnote-sample-def-row .setting-item-control input,
+.labnote-sample-def-row .setting-item-control textarea {
+  width: 100%;
+  min-width: 0;
+}
+
+.labnote-sample-def-row .setting-item-control textarea {
+  resize: vertical;
+}
+
+.labnote-sample-def-section h4 {
+  margin: var(--size-4-3) 0 var(--size-4-1);
+}
+
+.labnote-sample-def-usages {
+  max-height: 16em;
+  overflow-y: auto;
+  font-size: var(--font-ui-small);
+}
+
+.labnote-sample-def-usage-group ul {
+  margin: var(--size-4-1) 0 var(--size-4-2);
+  padding-left: var(--size-4-5);
+}
+
+.labnote-sample-def-usage-group summary {
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.labnote-sample-def-notes {
+  width: 100%;
+  font-size: var(--font-ui-small);
+}
+
+/* The button row has no label; its empty info column would take half the width. */
+.labnote-sample-def-buttons .setting-item-info {
+  display: none;
+}
+
+.labnote-sample-def-buttons .setting-item-control {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--size-4-2);
+}

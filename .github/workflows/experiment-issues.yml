@@ -1,0 +1,40 @@
+# Experiment ↔ Issue 자동화 — labnoteo 자동화 설정 명령이 볼트에 설치합니다.
+#
+# 결정적 경로만 사용: discuss:true 또는 status:needs-review 실험만 GitHub-hosted
+# 러너에서 결정적으로 Issue 생성/갱신(AI 없음). fetch + GITHUB_TOKEN(REST) 사용.
+#
+# 자유 서술에서 논의 필요를 판단하는 AI 역할은 로컬 AI 에이전트가 수행합니다
+# (AGENTS.md Playbook A — 에이전트가 discuss:true 신호를 설정하면 이 워크플로우가
+# 이슈를 멱등 생성). self-hosted 러너/로컬 LLM은 필요 없습니다.
+name: experiment-issues
+
+on:
+  push:
+    paths:
+      - 'labnote/**'
+  # 수동 실행은 백필입니다: push diff 대신 모든 실험 폴더를 훑어, 자동화가 도입되기
+  # 전에 적어 둔 마커나 그동안 놓친 신호를 한 번에 채웁니다(멱등).
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  # Deterministic promotion (no AI, GitHub-hosted).
+  deterministic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # need the push range to diff changed files
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Sync experiment issues (deterministic)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.event.after }}
+        run: node .labnoteo/scripts/issue-sync.mjs ${{ github.event_name == 'workflow_dispatch' && '--all' || '' }}

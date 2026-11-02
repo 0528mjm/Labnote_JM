@@ -1,0 +1,46 @@
+{
+  "DNA-1793090183678": {
+    "type": "DNA",
+    "alias": "RSM3-Block2-Oligopool-46",
+    "descriptions": [
+      "RSM3 Block2 MOSAIC에 사용한 Oligo pool 46개"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly_MOSAIC_One-step_self-assembly.labnote.md"
+    ],
+    "location": "냉동고1-JM칸"
+  },
+  "DNA-1793090292018": {
+    "type": "DNA",
+    "alias": "RSM3-Block2-OligopoolA-23",
+    "descriptions": [
+      "RSM3 Block2 MOSAIC 합성에 사용한 oligo pool A 23개"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly_MOSAIC_One-step_self-assembly.labnote.md"
+    ],
+    "location": "냉동고1-JM칸"
+  },
+  "DNA-1793090350017": {
+    "type": "DNA",
+    "alias": "RSM3-Block2-OligopoolB-23",
+    "descriptions": [
+      "RSM3 Block2 MOSAIC 합성에 사용되는 oligo pool B 23개"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly_MOSAIC_One-step_self-assembly.labnote.md"
+    ],
+    "location": "냉동고1-JM칸"
+  },
+  "DNA-1793350383655": {
+    "type": "DNA",
+    "alias": "RSM3-Block2-Oligo-96well plate",
+    "descriptions": [
+      "RSM2-Block2 MOSAIC 합성을 위한 Oligo plate"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly_MOSAIC_One-step_self-assembly.labnote.md"
+    ],
+    "location": "냉동고1번-JM칸"
+  }
+}

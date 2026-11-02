@@ -1,0 +1,104 @@
+{
+  "Equip-1789020746727": {
+    "type": "Equip",
+    "alias": "AllInOneCycler™ PCR system",
+    "descriptions": [
+      "BIONEER, A-2041",
+      "BIONEER, A-2041AllInOneCycler™ PCR system (BIONEER, A-2041)"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Equip-1789024617432": {
+    "type": "Equip",
+    "alias": "Centrifuge 5425",
+    "descriptions": [
+      "Eppendorf_5405000310"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Equip-1789027063130": {
+    "type": "Equip",
+    "alias": "E-Gel™ Power Snap Electrophoresis System",
+    "descriptions": [
+      "Invitrogen_G8300"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md"
+    ],
+    "location": null
+  },
+  "Equip-1789020711244": {
+    "type": "Equip",
+    "alias": "Pipett_10p",
+    "descriptions": [
+      "Eppendorf",
+      "EppendorfPipett_10p (Eppendorf)"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Equip-1789020568019": {
+    "type": "Equip",
+    "alias": "Pipett_200p",
+    "descriptions": [
+      "Eppendorf- Pipett_200p (Eppendorf)",
+      "Eppendorf"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Equip-1789024045341": {
+    "type": "Equip",
+    "alias": "Vortex-Genie 2 mixer",
+    "descriptions": [
+      "Scientific Industries",
+      "Scientific IndustriesVortex-Genie 2 mixer (Scientific Industries)"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md"
+    ],
+    "location": null
+  },
+  "Equip-1793091015359": {
+    "type": "Equip",
+    "alias": "Biometra TRobot II",
+    "descriptions": [
+      "Analytik Jena 96well"
+    ],
+    "sources": [],
+    "location": "베타실"
+  },
+  "Equip-1793091113782": {
+    "type": "Equip",
+    "alias": "Mupid-One",
+    "descriptions": [
+      "Electrophoresis System AD160"
+    ],
+    "sources": [],
+    "location": "DNA 실험대"
+  }
+}

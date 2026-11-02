@@ -1,0 +1,46 @@
+{
+  "Labware-1789020945985": {
+    "type": "Labware",
+    "alias": "Blue Tip_50-1000 μL",
+    "descriptions": [
+      "Eppendorf_0030073479",
+      "Eppendorf_0030073479Blue Tip_50-1000 μL (Eppendorf_0030073479)"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Labware-1789020678475": {
+    "type": "Labware",
+    "alias": "White Tip_0.1-10 µL",
+    "descriptions": [
+      "Eppendorf_0030073371"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  },
+  "Labware-1789020548121": {
+    "type": "Labware",
+    "alias": "Yellow Tip_2-200 μL",
+    "descriptions": [
+      "Eppendorf_0030073436",
+      "Eppendorf_0030073436- Yellow Tip_2-200 μL (Eppendorf_0030073436)"
+    ],
+    "sources": [
+      "002_WB010_DNA_Oligomer_Assembly.labnote.md",
+      "003_WG010_Blank_Workflow.labnote.md",
+      "004_WB030_DNA_Assembly.labnote.md",
+      "005_WB150_PCRbased_Target_Amplification.labnote.md"
+    ],
+    "location": null
+  }
+}

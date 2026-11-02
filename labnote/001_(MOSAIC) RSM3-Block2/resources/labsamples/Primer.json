@@ -1,0 +1,30 @@
+{
+  "Primer-1793091320128": {
+    "type": "Primer",
+    "alias": "DVA-Block2-Gibson-F",
+    "descriptions": [],
+    "sources": [],
+    "location": "냉동고1-JM칸"
+  },
+  "Primer-1793091356216": {
+    "type": "Primer",
+    "alias": "DVA-Block2-Gibson-R",
+    "descriptions": [],
+    "sources": [],
+    "location": "냉동고1-JM칸"
+  },
+  "Primer-1793091376018": {
+    "type": "Primer",
+    "alias": "RSM3-Block2-Gibson-F",
+    "descriptions": [],
+    "sources": [],
+    "location": "냉동고1-JM칸"
+  },
+  "Primer-1793091409821": {
+    "type": "Primer",
+    "alias": "RSM3-Block2-Gibson-R",
+    "descriptions": [],
+    "sources": [],
+    "location": "냉동고1-JM칸"
+  }
+}
